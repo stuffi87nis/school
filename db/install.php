@@ -48,7 +48,7 @@ if( $numOfUsers <= 0 ) {
 /*
 *   CREATE PRODUCTS TABLE
 */
-$stmt_createProductsTable = $db->prepare("
+$stmt_createStudentTable = $db->prepare("
   CREATE TABLE IF NOT EXISTS `students` (
     `id` int AUTO_INCREMENT PRIMARY KEY,
     `school_id` int,
@@ -59,16 +59,16 @@ $stmt_createProductsTable = $db->prepare("
     `deleted_at` datetime DEFAULT NULL
   )
 ");
-$stmt_createProductsTable->execute();
+$stmt_createStudentTable->execute();
 
 
 /*
 *   CREATE CATEGORIES TABLE
 */
-$stmt_createCategoriesTable = $db->prepare("
+$stmt_createSchoolTable = $db->prepare("
   CREATE TABLE IF NOT EXISTS `schools` (
     `id` int AUTO_INCREMENT PRIMARY KEY,
     `title` varchar(255)
   )
 ");
-$stmt_createCategoriesTable->execute();
+$stmt_createSchoolTable->execute();

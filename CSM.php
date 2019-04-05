@@ -1,6 +1,9 @@
 <?php
     require_once 'class/Student.class.php';
-
+    require_once 'class/School.class.php';
+    
+    $c = new School();
+    
 $s = new Student();
 $students = $s->all();
     
@@ -12,10 +15,9 @@ $students = $s->all();
 
           <h1>CSM school</h1>
           
-          <?php      foreach ($students as $student) { ?>
-          <table class="table">
-  <thead>
-         
+          
+  <table class="table">
+  <thead class="thead-dark">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">First name</th>
@@ -26,15 +28,22 @@ $students = $s->all();
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><?php echo $student->id; ?></td>
-      <td><?php echo $student->first_name; ?></td>
-      <td><?php echo $student->last_name;?></td>
-      <td><?php echo $student->grades; ?></td>
-      <td><?php echo $student->avg_grades; ?></td>
-    </tr>
+
+    <?php   foreach ($students as $student) { ?>
+
+      <tr>
+        <td><?php echo $student->id; ?></td>
+        <td><?php echo $student->first_name; ?></td>
+        <td><?php echo $student->last_name;?></td>
+        <td><?php echo $student->grades; ?></td>
+        <td><?php echo $student->avg_grades; ?></td>
+        <td>
+        </td>
+      </tr>
+
+    <?php } ?>
+
   </tbody>
 </table>
-           <?php } ?>
           
 <?php          include_once 'inc/footer.inc.php'; ?>

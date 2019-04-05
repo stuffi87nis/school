@@ -72,8 +72,8 @@ class Student {
     public function averageGrades(){
         $stmt_avg = $this->db->prepare("
             SELECT AVG(grades) as avg_grades
-            FROM `students`
-            WHERE `id` = :id
+            FROM `student_grades`
+            WHERE `student_id` = :student_id
             ");
         $stmt_avg->execute([ ':id' => $this->id ]);
         return $stmt_avg->fetch()->avg_grades;

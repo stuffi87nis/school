@@ -3,7 +3,7 @@
     require_once 'class/School.class.php';
     
     
-    $school = new School();
+$school = new School();
     
 
 $s = new Student();
