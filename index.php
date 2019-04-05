@@ -1,15 +1,5 @@
 <?php
-    require_once 'class/User.class.php';
 
-    if(isset($_POST['log_btn'])){
-        $logUser = new User();
-        $logUser->email = $_POST['email'];
-        $logUser->password = $_POST['password'];
-        if($logUser->login()){
-        header("Location: index.php");
-        die();
-        }
-    }
 
 
     include 'inc/header.inc.php';

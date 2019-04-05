@@ -1,0 +1,10 @@
+Otvoriti db i unutar foldera prvo proveriti config.inc.php da li se poklapaju podesavanja za localhost.
+Ako se sve poklapa onda unutar PHPMyadmin pravimo database - school_board.
+Nakon toga pokrecemo file install.php da bi smo instalirali tabele.
+Kada se to zavrsi onda mozemo da startujemo stranicu.
+
+Administrator je odmah ubacen i mozemo slobodono da se ulogujemo na sajt.
+
+teacher@mail.com
+
+md5("123")
