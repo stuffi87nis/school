@@ -7,4 +7,4 @@ Administrator je odmah ubacen i mozemo slobodono da se ulogujemo na sajt.
 
 teacher@mail.com
 
-md5("123")
+123
